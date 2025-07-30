@@ -1,0 +1,11 @@
+.vscode/
+node_modules/
+dist/
+trace/
+temp/
+*.tsbuildinfo
+.npm
+
+**/.DS_Store
+*.d.ts
+*.js

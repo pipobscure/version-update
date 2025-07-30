@@ -1,0 +1,40 @@
+{
+	"name": "@pipobscure/version-update",
+	"version": "0.0.0",
+	"description": "Automated Version Update Tool",
+	"main": "./dist/index.js",
+	"files": [ "dist/**/*", "!dist/tsconfig.tsbuildinfo" ],
+	"scripts": {
+		"format": "biome format --write src *.json",
+		"lint": "biome lint --write src",
+		"test": "node --test 'dist/**/*.test.js'",
+		"build": "rm -rf dist && tsc --build",
+		"prepublishOnly": "npm run build",
+		"postversion": "npm publish",
+		"postpublish": "git push --follow-tags"
+	},
+	"bin": {
+		"version-update": "dist/update.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/pipobscure/version-update.git"
+	},
+	"keywords": [
+		"configuration",
+		"logging"
+	],
+	"contributors": [
+		"Philipp Dunkel <pip@pipobscure.com>"
+	],
+	"license": "ISC",
+	"devDependencies": {
+		"@biomejs/biome": "^2.1.1",
+		"@types/node": "^24.0.14",
+		"@types/semver": "^7.7.0",
+		"typescript": "^5.8.3"
+	},
+	"dependencies": {
+		"semver": "^7.7.2"
+	}
+}
