@@ -1,6 +1,6 @@
 {
 	"name": "@pipobscure/version-update",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "Automated Version Update Tool",
 	"main": "./dist/index.js",
 	"files": [
